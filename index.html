@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>  
+    <head>  
+        <title>Napiyon</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet", href="style.css">
+
+
+    </head>
+    <body>
+    <h1>Sudoku</h1>
+    <hr>
+    
+    <div id="win-screen">
+        <h2>You Won! :D</h2>
+        <button onclick="playAgain()">Play Again</button>
+        <button onclick="menu()">Menu</button>
+    </div>
+    <div id="lost-screen">
+        <h2>You Lost! 💀</h2>
+        <button onclick="playAgain()">Play Again</button>
+        <button onclick="menu()">Menu</button>
+    </div>
+    
+<div class="container">
+        <div class="sol">
+        <div class="difficulty">
+            <button onclick="setDifficulty(32)">Kolay</button>
+            <button onclick="setDifficulty(40)">Orta</button>
+            <button onclick="setDifficulty(50)">Zor</button>
+            <button onclick="setDifficulty(64)">Ekstrem</button>
+        </div>
+    </div>
+    <div class="orta">
+        <div class="timer">⏱ <span id="timer">00:00</span></div>
+        <table id="sudoku-board"></table>
+        <div id="hatalar">
+            <div class="hata-kutu"></div>
+            <div class="hata-kutu"></div>
+            <div class="hata-kutu"></div>
+        </div>
+    </div>
+</div>
+    
+    <script src="sudoku.js"></script>
+    </body>
+</html>

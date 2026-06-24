@@ -1,0 +1,191 @@
+body {
+    background-color: hsla(231, 23%, 17%, 0.685);
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+hr {
+    border-color: #ccc;
+    border-width: 1px;
+    margin: auto;
+    width: 440px;
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 20px;
+}
+table {
+    margin: 0;
+    border-collapse: collapse;
+    border: 2px solid #2c3e50;
+}
+
+td {
+    width: 90px;
+    height: 70px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 36px;
+    font-weight: italic;
+    color: #2c3e50;
+    background-color: #ffffff;
+    border: 1px solid #bbb;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: #d4e6f1;
+}
+
+td.selected {
+    background-color: #d6eff8;
+}
+
+.border-right {
+    border-right: 3px solid #2c3e50;
+}
+
+.border-bottom{
+    border-bottom: 3px solid #2c3e50;
+}
+td.highlighted{
+    background-color: #d6eaf8;
+}
+
+.difficulty{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: -100px;
+}
+.difficulty button{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: #0b1014;
+    border-color: #0b1014;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color:rgb(19, 184, 55);
+}
+.difficulty button:hover{
+    animation: butonParlama 2.4s ease-in;
+}
+@keyframes butonParlama {
+    0% { background-color: white; }
+    5%{ background-color: #1c537e;}
+    50% { background-color: #1c537e; }
+    100% { background-color: #1c537e; }
+}
+td.flash {
+    animation: flash 1.5s ease;
+}
+
+@keyframes flash {
+    0% { background-color: rgb(92, 71, 71); }
+    50% { background-color: #524c4a; }
+    100% { background-color: rgb(187, 182, 179); }
+}
+.sol{
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    margin-top: 280px;
+    margin-left: -20px;
+}
+.orta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.timer{
+    font-size: 24px;
+    font-weight: bold;
+    color: #dac613;
+    display: flex;
+}
+#win-screen {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 0px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+#win-screen h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#win-screen button {
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+}
+#lost-screen {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    z-index: 999;
+    border-radius: 2%;
+    border-color: #1c537e;
+}
+#lost-screen h2{
+    font-size: 36px;
+    color: #1f495a;
+    margin-bottom: 20px;
+}
+#lost-screen button{
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    color: #1f495a;
+}
+
+#hatalar {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.hata-kutu {
+    width: 80px;
+    height: 80px;
+    border: 5px solid red;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: red;
+}
